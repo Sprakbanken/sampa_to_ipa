@@ -6,7 +6,7 @@ import sys
 
 # Dict with all consonants, vowels and diphthongs in the NST lexicon. Values are lists of triplets, where the first element is
 # the X-SAMPA form, the second the NoFAbet form (not relevant here), and the third the IPA form.
-# The IPA transcription is as faithful as possible to the X-SAMPA. I wonder, though, if E*u0 shouldn't be æ͡ʉ, not ɛ͡ʉ
+# The IPA transcription is mostly faithful to the X-SAMPA, except that E*u0 is æ͡ʉ, not ɛ͡ʉ and @U is ɔ͡ʊ, not ə͡ʊ
 segdict = {'consonants': [('b', 'B', 'b'), ('d', 'D', 'd'), ('f', 'F', 'f'), ('g', 'G', 'g'), ('h', 'H', 'h'), ('j', 'J', 'j'), ('k', 'K', 'k'), \
                 ('C', 'KJ', 'ç'), ('l', 'L', 'l'), ('m', 'M', 'm'), ('n', 'N', 'n'), ('N', 'NG', 'ŋ'), ('p', 'P', 'p'), ('r', 'R', 'r'), \
                 ('d`', 'RD', 'ɖ'), ('l`', 'RL', 'ɭ'), ('n`', 'RN', 'ɳ'), ('s`', 'RS', 'ʂ'), ('t`', 'RT', 'ʈ'), ('s', 'S', 's'), ('S', 'SJ', 'ʃ'), \
@@ -15,7 +15,7 @@ segdict = {'consonants': [('b', 'B', 'b'), ('d', 'D', 'd'), ('f', 'F', 'f'), ('g
                 ('I', 'IH', 'ɪ'), ('i:', 'II', 'ɪː'), ('l=', 'LX', 'l̩'), ('m=', 'MX', 'm̩'), ('n=', 'NX', 'n̩'), ('o:', 'OA', 'oː'), ('O', 'OAH', 'ɔ'), ('2:', 'OE', 'øː'), \
                 ('9', 'OEH', 'œ'), ('U', 'OH', 'ʊ'), ('u:', 'OO', 'uː'), ('l`=', 'RLX', 'ɭ̩'), ('n`=', 'RNX', 'ɳ̩'), ('r=', 'RX', 'r̩'), ('s=', 'SX', 's̩'), ('u0', 'UH', 'ʉ'), \
                 ('}:', 'UU', 'ʉː'), ('Y', 'YH', 'ʏ'), ('y:', 'YY', 'yː')], \
-            'diphthongs': [('{*I', 'AEJ', 'æ͡ɪ'), ('E*u0', 'AEW', 'ɛ͡ʉ'), ('A*I', 'AJ', 'ɑ͡ɪ'), ('9*Y', 'OEJ', 'œ͡ʏ'), ('O*Y', 'OJ', 'ɔ͡ʏ'), ('@U', 'OU', 'o͡ʊ')]}
+            'diphthongs': [('{*I', 'AEJ', 'æ͡ɪ'), ('E*u0', 'AEW', 'æ͡ʉ'), ('A*I', 'AJ', 'ɑ͡ɪ'), ('9*Y', 'OEJ', 'œ͡ʏ'), ('O*Y', 'OJ', 'ɔ͡ʏ'), ('@U', 'OU', 'ɔ͡ʊ')]}
 sampa_to_ipa_mapping = {seg[0]:seg[2] for segtypelist in segdict.values() for seg in segtypelist}
 
 # X-SAMPA to IPA mapping of syllable-pertaining symbols. '$'/'.' is syllable boundary, '_' is word boundary in multiword expressions,
