@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+# Author: Per Erik Solberg, National Library of Norway
+# License: Public domain (CC0)
+
 import re
 import sys
 
